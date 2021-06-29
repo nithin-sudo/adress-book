@@ -8,30 +8,25 @@ public class Person {
     private String state;
     private String email;
     private String zip;
-    private String phoneNumber;
+    private long phoneNumber;
 
     public String getFirstName() {
-
         return firstName;
     }
 
     public void setFirstName(String firstName) {
-
         this.firstName = firstName;
     }
 
     public String getLastName() {
-
         return lastName;
     }
 
     public void setLastName(String lastName) {
-
         this.lastName = lastName;
     }
 
     public String getAddress() {
-
         return address;
     }
 
@@ -71,13 +66,14 @@ public class Person {
         this.zip = zip;
     }
 
-    public String getPhoneNumber() {
+    public long getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(String phoneNumber) {
+    public void setPhoneNumber(long phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
+
     @Override
     public String toString(){
         return "[" +"firstName=" + firstName + '\'' + ", lastName='" + lastName + '\'' +
@@ -85,4 +81,5 @@ public class Person {
                 ", state='" +state + '\'' + ", zip='" + zip + '\'' +
                 ", phoneNo='" + phoneNumber+ '\'' + ", email='" + email + '\'' + ']';
     }
+
 }

@@ -7,5 +7,7 @@ public class AddressBookMain {
         Service service = new Service();
         service.createContact();
         service.showContact();
+        service.editContact();
+        service.showContact();
     }
 }
