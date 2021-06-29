@@ -9,5 +9,7 @@ public class AddressBookMain {
         service.showContact();
         service.editContact();
         service.showContact();
+        service.deleteContact();
+        service.showContact();
     }
 }

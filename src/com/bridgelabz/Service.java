@@ -54,77 +54,93 @@ public class Service {
         long phoneNumber = scanner.nextLong();
         System.out.println("enter the record you want to edit 1.first name 2.Last name 3.address 4.city 5.state 6.zip code 7.phone number 8.email");
         int choice = scanner.nextInt();
-            switch (choice) {
-                case 1:
-                    System.out.println("enter the first name you want to replace:");
-                    String replaceFirstName = scanner.next();
-                    for(int i = 0; i < personContact.length; i++) {
-                        if (personContact[i].getPhoneNumber() == (phoneNumber)) {
-                            personContact[i].setFirstName(replaceFirstName);
-                        }
+        switch (choice) {
+            case 1:
+                System.out.println("enter the first name you want to replace:");
+                String replaceFirstName = scanner.next();
+                for (int i = 0; i < personContact.length; i++) {
+                    if (personContact[i].getPhoneNumber() == (phoneNumber)) {
+                        personContact[i].setFirstName(replaceFirstName);
                     }
-                    break;
-                case 2:
-                    System.out.println("enter the last name you want to replace:");
-                    String replaceLastName = scanner.next();
-                    for(int i = 0; i < personContact.length; i++) {
-                        if (personContact[i].getPhoneNumber() == (phoneNumber)) {
-                            personContact[i].setLastName(replaceLastName);
-                        }
+                }
+                break;
+            case 2:
+                System.out.println("enter the last name you want to replace:");
+                String replaceLastName = scanner.next();
+                for (int i = 0; i < personContact.length; i++) {
+                    if (personContact[i].getPhoneNumber() == (phoneNumber)) {
+                        personContact[i].setLastName(replaceLastName);
                     }
-                    break;
-                case 3:
-                    System.out.println("enter the address you want to replace:");
-                    String replacedAddress = scanner.next();
-                    for(int i = 0; i < personContact.length; i++) {
-                        if (personContact[i].getPhoneNumber() == (phoneNumber)) {
-                            personContact[i].setAddress(replacedAddress);
-                        }
+                }
+                break;
+            case 3:
+                System.out.println("enter the address you want to replace:");
+                String replacedAddress = scanner.next();
+                for (int i = 0; i < personContact.length; i++) {
+                    if (personContact[i].getPhoneNumber() == (phoneNumber)) {
+                        personContact[i].setAddress(replacedAddress);
                     }
-                    break;
-                case 4:
-                    System.out.println("enter the city you want to replace:");
-                    String replacedCity = scanner.next();
-                    for(int i = 0; i < personContact.length; i++) {
-                        if (personContact[i].getPhoneNumber() == (phoneNumber)) {
-                            personContact[i].setCity(replacedCity);
-                        }
+                }
+                break;
+            case 4:
+                System.out.println("enter the city you want to replace:");
+                String replacedCity = scanner.next();
+                for (int i = 0; i < personContact.length; i++) {
+                    if (personContact[i].getPhoneNumber() == (phoneNumber)) {
+                        personContact[i].setCity(replacedCity);
                     }
-                    break;
-                case 5:
-                    System.out.println("enter the state you want to replace:");
-                    String replacedState = scanner.next();
-                    for(int i = 0; i < personContact.length; i++) {
-                        if (personContact[i].getPhoneNumber() == (phoneNumber))
-                            personContact[i].setState(replacedState);
-                    }
-                    break;
-                case 6:
-                    System.out.println("enter the zip you want to replace:");
-                    String replacedZip = scanner.next();
-                    for(int i = 0; i < personContact.length; i++) {
-                        if (personContact[i].getPhoneNumber() == (phoneNumber))
-                            personContact[i].setZip(replacedZip);
-                    }
-                    break;
-                case 7:
-                    System.out.println("enter the phone number you want to replace:");
-                    long replacedPhoneNumber = scanner.nextLong();
-                    for(int i = 0; i < personContact.length; i++) {
-                        if (personContact[i].getPhoneNumber() == (phoneNumber))
-                            personContact[i].setPhoneNumber(replacedPhoneNumber);
-                    }
-                    break;
-                case 8:
-                    System.out.println("enter the email you want to replace:");
-                    String replacedEmail= scanner.next();
-                    for(int i = 0; i < personContact.length; i++) {
-                        if (personContact[i].getPhoneNumber() == (phoneNumber))
-                            personContact[i].setEmail(replacedEmail);
-                    }
-                    break;
-                default:
-                    System.out.println("invalid choice");
+                }
+                break;
+            case 5:
+                System.out.println("enter the state you want to replace:");
+                String replacedState = scanner.next();
+                for (int i = 0; i < personContact.length; i++) {
+                    if (personContact[i].getPhoneNumber() == (phoneNumber))
+                        personContact[i].setState(replacedState);
+                }
+                break;
+            case 6:
+                System.out.println("enter the zip you want to replace:");
+                String replacedZip = scanner.next();
+                for (int i = 0; i < personContact.length; i++) {
+                    if (personContact[i].getPhoneNumber() == (phoneNumber))
+                        personContact[i].setZip(replacedZip);
+                }
+                break;
+            case 7:
+                System.out.println("enter the phone number you want to replace:");
+                long replacedPhoneNumber = scanner.nextLong();
+                for (int i = 0; i < personContact.length; i++) {
+                    if (personContact[i].getPhoneNumber() == (phoneNumber))
+                        personContact[i].setPhoneNumber(replacedPhoneNumber);
+                }
+                break;
+            case 8:
+                System.out.println("enter the email you want to replace:");
+                String replacedEmail = scanner.next();
+                for (int i = 0; i < personContact.length; i++) {
+                    if (personContact[i].getPhoneNumber() == (phoneNumber))
+                        personContact[i].setEmail(replacedEmail);
+                }
+                break;
+            default:
+                System.out.println("invalid choice");
+        }
+    }
+    /**
+     * asking user to enter a mobile number and deleting a record accordingly.
+     */
+    public void deleteContact()
+        {
+            System.out.println("Enter a mobile number to delete a contact:");
+            long phoneNumber = scanner.nextLong();
+            for(int i = 0; i < personContact.length; i++) {
+                if (personContact[i].getPhoneNumber() == (phoneNumber))
+                {
+                    personContact[i]=null;
+                }
             }
+
+
         }
 }
